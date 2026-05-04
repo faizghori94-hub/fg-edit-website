@@ -3,6 +3,8 @@
 <head>
 <title>FG EDIT</title>
 
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <style>
 *{
   margin:0;
@@ -11,37 +13,51 @@
   font-family:Arial;
 }
 
-/* VIDEO BACKGROUND */
+/* VIDEO BG */
 video{
   position:fixed;
-  top:0;
-  left:0;
   width:100%;
   height:100%;
   object-fit:cover;
+  z-index:-2;
+}
+
+/* OVERLAY */
+.overlay{
+  position:fixed;
+  width:100%;
+  height:100%;
+  background:rgba(0,0,0,0.7);
   z-index:-1;
 }
 
-/* DARK OVERLAY */
-.overlay{
+/* NAVBAR */
+.nav{
   position:fixed;
-  top:0;
-  left:0;
   width:100%;
-  height:100%;
-  background:rgba(0,0,0,0.6);
-  z-index:-1;
+  padding:15px;
+  display:flex;
+  justify-content:space-between;
+  background:rgba(0,0,0,0.5);
+  color:white;
+  z-index:10;
+}
+
+.nav a{
+  color:white;
+  margin:0 10px;
+  text-decoration:none;
 }
 
 /* HERO */
 .hero{
   text-align:center;
-  padding-top:100px;
+  padding-top:120px;
   color:white;
 }
 
 .hero img{
-  width:180px;
+  width:150px;
   margin-bottom:20px;
 }
 
@@ -49,33 +65,20 @@ video{
   font-size:50px;
 }
 
-.hero p{
-  margin-top:10px;
-  font-size:18px;
-}
-
-/* BUTTON */
 .btn{
   display:inline-block;
-  margin:15px;
-  padding:15px 30px;
+  margin:10px;
+  padding:12px 25px;
   border-radius:30px;
   background:linear-gradient(45deg,#ff00cc,#3333ff);
   color:white;
   text-decoration:none;
-  font-weight:bold;
-  transition:0.3s;
-}
-
-.btn:hover{
-  transform:scale(1.1);
 }
 
 /* SECTION */
 .section{
-  margin-top:150px;
+  padding:60px 20px;
   background:#0a0a0a;
-  padding:50px 20px;
   text-align:center;
 }
 
@@ -88,62 +91,115 @@ video{
 .card{
   display:inline-block;
   width:250px;
-  margin:15px;
-  padding:25px;
+  margin:10px;
+  padding:20px;
   background:#111;
   border-radius:15px;
   color:white;
-  transition:0.3s;
+  text-decoration:none;
 }
 
-.card:hover{
-  transform:translateY(-10px);
+/* GALLERY */
+.gallery img{
+  width:200px;
+  margin:10px;
+  border-radius:10px;
+}
+
+/* PRICE */
+.price{
+  display:inline-block;
+  background:#111;
+  padding:20px;
+  margin:10px;
+  color:white;
+  border-radius:10px;
 }
 </style>
 </head>
 
 <body>
 
-<!-- 🌿 VIDEO BACKGROUND -->
+<!-- VIDEO -->
 <video autoplay muted loop>
-  <source src="https://www.w3schools.com/howto/rain.mp4" type="video/mp4">
+<source src="https://www.w3schools.com/howto/rain.mp4">
 </video>
 
 <div class="overlay"></div>
 
+<!-- NAVBAR -->
+<div class="nav">
+  <div>FG EDIT</div>
+  <div>
+    <a href="#services">Services</a>
+    <a href="#gallery">Gallery</a>
+    <a href="#price">Price</a>
+    <a href="#contact">Contact</a>
+  </div>
+</div>
+
 <!-- HERO -->
 <div class="hero">
+<img src="logo.png">
+<h1>FG EDIT</h1>
+<p>Professional Photo & Video Editing</p>
 
-  <!-- 🔥 YOUR LOGO (upload in github & replace name) -->
-  <img src="logo.png" alt="FG Logo">
-
-  <h1>FG EDIT</h1>
-  <p>Professional Photo & Video Editing</p>
-
-  <a class="btn" href="https://wa.me/918347288292">WhatsApp</a>
-  <a class="btn" href="https://instagram.com/faizuuu_751">Instagram</a>
-
+<a class="btn" href="https://wa.me/918347288292">WhatsApp</a>
+<a class="btn" href="https://instagram.com/faizuuu_751">Instagram</a>
 </div>
 
 <!-- SERVICES -->
-<div class="section">
-  <h2>Our Services</h2>
+<div id="services" class="section">
+<h2>Our Services</h2>
 
-<a href="https://wa.me/918347288292" class="card" target="_blank">
-  <h3>Photo Editing</h3>
-  <p>Retouch, color grading, HD edit</p>
-  </a>
+<a href="https://wa.me/918347288292" class="card">
+<h3>Photo Editing</h3>
+<p>HD retouch & color grading</p>
+</a>
 
-  <div class="card">
-    <h3>Video Editing</h3>
-    <p>Reels, cinematic, YouTube edits</p>
-  </div>
+<a href="https://wa.me/918347288292" class="card">
+<h3>Video Editing</h3>
+<p>Reels, cinematic edits</p>
+</a>
 
-  <div class="card">
-    <h3>Fast Delivery</h3>
-    <p>Quick & professional work</p>
-  </div>
+<a href="https://wa.me/918347288292" class="card">
+<h3>Fast Delivery</h3>
+<p>Quick service</p>
+</a>
 
+</div>
+
+<!-- GALLERY -->
+<div id="gallery" class="section">
+<h2>Our Work</h2>
+
+<img src="https://via.placeholder.com/200">
+<img src="https://via.placeholder.com/200">
+<img src="https://via.placeholder.com/200">
+
+</div>
+
+<!-- PRICE -->
+<div id="price" class="section">
+<h2>Pricing</h2>
+
+<div class="price">
+<h3>Photo Edit</h3>
+<p>₹50 - ₹200</p>
+</div>
+
+<div class="price">
+<h3>Video Edit</h3>
+<p>₹200 - ₹1000</p>
+</div>
+
+</div>
+
+<!-- CONTACT -->
+<div id="contact" class="section">
+<h2>Contact</h2>
+<p>WhatsApp: 8347288292</p>
+<p>Instagram: @faizuuu_751</p>
 </div>
 
 </body>
