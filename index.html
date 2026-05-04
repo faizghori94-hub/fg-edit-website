@@ -4,44 +4,147 @@
 <title>FG EDIT</title>
 
 <style>
-body{
-background:black;
-color:white;
-font-family:Arial;
-text-align:center;
-padding:50px;
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:Arial;
 }
 
-h1{
-font-size:60px;
-color:purple;
+/* VIDEO BACKGROUND */
+video{
+  position:fixed;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  z-index:-1;
 }
 
+/* DARK OVERLAY */
+.overlay{
+  position:fixed;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  background:rgba(0,0,0,0.6);
+  z-index:-1;
+}
+
+/* HERO */
+.hero{
+  text-align:center;
+  padding-top:100px;
+  color:white;
+}
+
+.hero img{
+  width:180px;
+  margin-bottom:20px;
+}
+
+.hero h1{
+  font-size:50px;
+}
+
+.hero p{
+  margin-top:10px;
+  font-size:18px;
+}
+
+/* BUTTON */
 .btn{
-display:inline-block;
-padding:15px 30px;
-background:white;
-color:black;
-text-decoration:none;
-border-radius:10px;
-margin:10px;
+  display:inline-block;
+  margin:15px;
+  padding:15px 30px;
+  border-radius:30px;
+  background:linear-gradient(45deg,#ff00cc,#3333ff);
+  color:white;
+  text-decoration:none;
+  font-weight:bold;
+  transition:0.3s;
+}
+
+.btn:hover{
+  transform:scale(1.1);
+}
+
+/* SECTION */
+.section{
+  margin-top:150px;
+  background:#0a0a0a;
+  padding:50px 20px;
+  text-align:center;
+}
+
+.section h2{
+  color:white;
+  margin-bottom:30px;
+}
+
+/* CARDS */
+.card{
+  display:inline-block;
+  width:250px;
+  margin:15px;
+  padding:25px;
+  background:#111;
+  border-radius:15px;
+  color:white;
+  transition:0.3s;
+}
+
+.card:hover{
+  transform:translateY(-10px);
 }
 </style>
 </head>
 
 <body>
 
-<h1>FG EDIT</h1>
+<!-- 🌿 VIDEO BACKGROUND -->
+<video autoplay muted loop>
+  <source src="https://www.w3schools.com/howto/rain.mp4" type="video/mp4">
+</video>
 
-<p>Professional Photo & Video Editing</p>
+<div class="overlay"></div>
 
-<a class="btn" href="https://wa.me/918347288292">
-WhatsApp 
-</a>
+<!-- HERO -->
+<div class="hero">
 
-<a class="btn" href="https://instagram.com/faizuuu_751"
-Instagram
-</a>
+  <!-- 🔥 YOUR LOGO (upload in github & replace name) -->
+  <img src="logo.png" alt="FG Logo">
+
+  <h1>FG EDIT</h1>
+  <p>Professional Photo & Video Editing</p>
+
+  <a class="btn" href="https://wa.me/918347288292">WhatsApp</a>
+  <a class="btn" href="https://instagram.com/faizuuu_751">Instagram</a>
+
+</div>
+
+<!-- SERVICES -->
+<div class="section">
+  <h2>Our Services</h2>
+
+  <div class="card">
+    <h3>Photo Editing</h3>
+    <p>Retouch, color grading, HD edit</p>
+  </div>
+
+  <div class="card">
+    <h3>Video Editing</h3>
+    <p>Reels, cinematic, YouTube edits</p>
+  </div>
+
+  <div class="card">
+    <h3>Fast Delivery</h3>
+    <p>Quick & professional work</p>
+  </div>
+
+</div>
 
 </body>
 </html>
